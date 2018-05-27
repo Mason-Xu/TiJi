@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey200"
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -9,25 +11,104 @@
         android:background="@color/colorPrimaryDark">
 
         <ImageButton
-            android:id="@+id/setting_back"
+            android:id="@+id/help_back"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_gravity="center_vertical"
             android:layout_margin="16dp"
             android:background="?android:attr/selectableItemBackgroundBorderless"
-            android:src="@drawable/ic_back"
             android:scaleType="fitXY"
+            android:src="@drawable/ic_back"
             android:theme="@style/RippleWhite" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="帮助"
             android:layout_gravity="center"
             android:layout_marginLeft="16dp"
-            android:textSize="20sp"
-            android:textColor="#ffffff" />
+            android:text="帮助"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
 
     </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/layout_shape"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textSize="20sp"
+                    android:layout_marginTop="8dp"
+                    android:text="如何测量腰围?" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="225dp"
+                    android:layout_margin="4dp"
+                    android:src="@drawable/img_yaowei_scale" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="测量时，身体直立，两臂自然下垂，不要收腹，呼吸保持平稳，皮尺水平放在髋骨上、肋骨下最窄的部位（通常是肚脐上方3厘米处）.取三次测量的平均值" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/layout_shape"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:text="如何测量臀围?"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="225dp"
+                    android:layout_margin="4dp"
+                    android:src="@drawable/img_tunwei_scale" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="测量时，两腿并拢直立，两臂自然下垂，皮尺水平放在前面的耻骨联合和背后臀大肌最凸处。是臀部最突出的地方，但是注意量的时候要对着镜子，这样可以知道自己臀部的形状。取三次测量平均值." />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
 
 </LinearLayout>

@@ -13,6 +13,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+
 public class MainActivity extends AppCompatActivity {
 
     private TabLayout mTabLayout;
@@ -27,7 +28,8 @@ public class MainActivity extends AppCompatActivity {
     private TabLayout.Tab five;
 
 
-    private Record_Info[] records = {new Record_Info(65,"2018")};
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,9 +37,13 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+
+
         //初始化视图
         initViews();
     }
+
+
 
     private void initViews() {
 
@@ -103,7 +109,6 @@ public class MainActivity extends AppCompatActivity {
                                 new DialogInterface.OnClickListener() {
                                     @Override
                                     public void onClick(DialogInterface dialog, int id) {
-
                                     }
                                 });
 
