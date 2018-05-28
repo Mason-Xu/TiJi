@@ -16,6 +16,8 @@ public class Calculate2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.dialog_frag2);
+        SysApplication.getInstance().addActivity(this);
+
         TextView tv_whtr_WHTR = (TextView) findViewById(R.id.tv_whtr_WHTR);
         TextView tv_whtr_health = (TextView) findViewById(R.id.tv_whtr_health);
         ImageView img_whtr_health = (ImageView) findViewById(R.id.img_whtr_health);

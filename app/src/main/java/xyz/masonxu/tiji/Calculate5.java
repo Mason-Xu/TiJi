@@ -15,6 +15,7 @@ public class Calculate5 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.dialog_frag5);
+        SysApplication.getInstance().addActivity(this);
 
         TextView tv_best_weight = (TextView) findViewById(R.id.tv_best_weight);
         TextView tv_best_shangwei = (TextView) findViewById(R.id.tv_best_shangwei);

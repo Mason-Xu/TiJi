@@ -27,7 +27,6 @@ public class Fragment1 extends Fragment {
     public View onCreateView(LayoutInflater inflater,
                              @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-
         view = inflater.inflate(R.layout.fragment1,container,false);
         final EditText et_bmi_height = (EditText)view.findViewById(R.id.et_bmi_height);
         final EditText et_bmi_weight = (EditText)view.findViewById(R.id.et_bmi_weight);

@@ -22,7 +22,7 @@ public class Calculate1 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.dialog_frag1);
-
+        SysApplication.getInstance().addActivity(this);
         TextView tv_bmi_BMI = (TextView) findViewById(R.id.tv_bmi_BMI);
         TextView tv_bmi_health = (TextView) findViewById(R.id.tv_bmi_health);
         ImageView img_bmi_health = (ImageView)findViewById(R.id.img_bmi_health);

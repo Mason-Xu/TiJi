@@ -15,6 +15,8 @@ public class Calculate4 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.dialog_frag4);
+        SysApplication.getInstance().addActivity(this);
+
         TextView tv_tizhi_Tizhi = (TextView) findViewById(R.id.tv_tizhi_Tizhi);
         TextView tv_tizhi_health = (TextView) findViewById(R.id.tv_tizhi_health);
         ImageView img_tizhi_health = (ImageView) findViewById(R.id.img_tizhi_health);

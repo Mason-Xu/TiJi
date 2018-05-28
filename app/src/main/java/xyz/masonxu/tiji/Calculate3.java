@@ -15,7 +15,9 @@ public class Calculate3 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.dialog_frag3);
-        TextView tv_whr_WHR = (TextView) findViewById(R.id.tv_tizhi_Tizhi);
+        SysApplication.getInstance().addActivity(this);
+
+        TextView tv_whr_WHR = (TextView) findViewById(R.id.tv_whr_WHR);
         TextView tv_whr_health = (TextView) findViewById(R.id.tv_whr_health);
         ImageView img_whr_health = (ImageView) findViewById(R.id.img_whr_health);
         ImageButton back = (ImageButton) findViewById(R.id.calculate_whr_back);
