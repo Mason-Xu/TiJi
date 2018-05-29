@@ -34,6 +34,10 @@ public class Calculate1 extends AppCompatActivity {
         Double BMI_format = b.setScale(1, BigDecimal.ROUND_HALF_UP).doubleValue();
         tv_bmi_BMI.setText(BMI_format.toString());
 
+        Body body = new Body();
+        body.setBMI(BMI_format);
+        body.updateAll("id=1");
+
         if(BMI < 18.5){
             tv_bmi_health.setText("太轻了");
             img_bmi_health.setImageResource(R.drawable.img_health);

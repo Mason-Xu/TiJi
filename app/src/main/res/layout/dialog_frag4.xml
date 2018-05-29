@@ -179,6 +179,31 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:background="@drawable/layout_shape"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:text="@string/tizhi_download"/>
+
+                <Button
+                    android:id="@+id/bt_tizhi_download"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|right"
+                    android:layout_margin="16dp"
+                    android:background="@drawable/btn_selector2"
+                    android:text="下载"
+                    android:textColor="@color/white"
+                    android:theme="@style/RippleBlue" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/layout_shape"
                 android:orientation="vertical">
 
                 <LinearLayout

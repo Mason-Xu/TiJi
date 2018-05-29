@@ -30,6 +30,9 @@ public class Calculate3 extends AppCompatActivity {
         Double WHR_format = b.setScale(2, BigDecimal.ROUND_HALF_UP).doubleValue();
         tv_whr_WHR.setText(WHR_format.toString());
 
+        Body body = new Body();
+        body.setWHR(WHR_format);
+        body.updateAll("id=1");
         if (sex==1) {
             if (WHR == 0.9) {
                 tv_whr_health.setText("完美");

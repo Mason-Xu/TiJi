@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>
+    <dbname value="BodyStore" ></dbname>
+
+    <version value="1" ></version>
+    <list>
+        <mapping class="xyz.masonxu.tiji.Body"></mapping>
+    </list>
+</litepal>

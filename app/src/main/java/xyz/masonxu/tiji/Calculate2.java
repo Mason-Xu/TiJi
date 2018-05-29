@@ -28,8 +28,12 @@ public class Calculate2 extends AppCompatActivity {
 
         // 四舍五入保留一位小数
         BigDecimal b = new BigDecimal(WHTR);
-        Double WHR_format = b.setScale(3, BigDecimal.ROUND_HALF_UP).doubleValue();
-        tv_whtr_WHTR.setText(WHR_format.toString());
+        Double WHtR_format = b.setScale(3, BigDecimal.ROUND_HALF_UP).doubleValue();
+        tv_whtr_WHTR.setText(WHtR_format.toString());
+
+        Body body = new Body();
+        body.setWHtR(WHtR_format);
+        body.updateAll("id=1");
 
         if (sex==1) {
             if (WHTR < 0.34) {

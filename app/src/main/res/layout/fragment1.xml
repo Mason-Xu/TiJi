@@ -99,6 +99,7 @@
                         android:layout_height="wrap_content"
                         android:ems="5"
                         android:hint="请输入身高"
+                        android:inputType="number"
                         android:singleLine="true"
                         android:textSize="20sp" />
                 </LinearLayout>

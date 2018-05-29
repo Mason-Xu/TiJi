@@ -13,6 +13,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import org.litepal.LitePal;
+
+import cn.bmob.v3.Bmob;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -36,11 +40,17 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         SysApplication.getInstance().addActivity(this);
 
+        Bmob.initialize(this,"38653897272aff77fc7590558a3a72fb");
+
         Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        //初始化数据库
+        LitePal.getDatabase();
 
-
+        Body body = new Body();
+        body.setId(1);
+        body.save();
         //初始化视图
         initViews();
     }

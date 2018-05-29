@@ -30,6 +30,10 @@ public class Calculate4 extends AppCompatActivity {
         Double Tizhi_format = b.setScale(2, BigDecimal.ROUND_HALF_UP).doubleValue();
         tv_tizhi_Tizhi.setText(Tizhi_format.toString());
 
+        Body body = new Body();
+        body.setTizhi(Tizhi_format);
+        body.updateAll("id=1");
+
         if (sex==1) {
             if (Tizhi >=10 && Tizhi<=20) {
                 tv_tizhi_health.setText("正常");
@@ -68,4 +72,6 @@ public class Calculate4 extends AppCompatActivity {
             }
         });
     }
+
+
 }

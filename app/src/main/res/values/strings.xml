@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">体己</string>
+    <string name="app_name">体计</string>
     <string name="title_activity_setting">setting</string>
     //设置白色按钮变化颜色
     <drawable name="clr_normal1">#FFF</drawable>
@@ -16,4 +16,5 @@
     <string name="whr_intro">腰臀比例(WHR)被用作衡量健康和出现严重健康风险的指标，研究发现重量集中在腰部的人较重量集中在臀部的人面临更多的健康风险。</string>
     <string name="tizhi_intro">体脂肪率，又称体脂百分比、体脂率，是将脂肪含量用其占总体重的百分比的形式表示，一般用于动物，但近年开始有在人体的应用。一般而言，女性的必需脂肪比例会比男性为高，因为需要生育、喂哺及其他由荷尔蒙调节的身体机能。</string>
     <string name="bestbody_intro">身材比例是从多角度衡量一个人身材好坏的窗口之一，对形象有重要作用。</string>
+    <string name="tizhi_download">由于体脂率跟年龄有很大的关联,此计算并不精确,点击下载详细图表到手机进行对照.</string>
 </resources>
