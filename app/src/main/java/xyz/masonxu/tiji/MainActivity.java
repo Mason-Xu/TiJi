@@ -2,6 +2,8 @@ package xyz.masonxu.tiji;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AlertDialog;
@@ -12,6 +14,7 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
 import org.litepal.LitePal;
 
@@ -40,7 +43,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         SysApplication.getInstance().addActivity(this);
 
-        Bmob.initialize(this,"38653897272aff77fc7590558a3a72fb");
+        Bmob.initialize(this, "38653897272aff77fc7590558a3a72fb");
+
+
 
         Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -104,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivityForResult(intent2, 0);
                 break;
             case R.id.about:
-                // 使用LayoutInflater来加载dialog_setname.xml布局
+                // 使用LayoutInflater来加载dialog布局
                 LayoutInflater layoutInflater = LayoutInflater.from(this);
                 View nameView = layoutInflater.inflate(R.layout.dialog_about, null);
 
@@ -113,6 +118,7 @@ public class MainActivity extends AppCompatActivity {
 
                 // 使用setView()方法将布局显示到dialog
                 alertDialogBuilder.setView(nameView);
+
 
                 // 设置Dialog按钮
                 alertDialogBuilder

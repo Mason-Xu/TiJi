@@ -11,7 +11,7 @@
         android:background="@color/colorPrimaryDark">
 
         <ImageButton
-            android:id="@+id/login_back"
+            android:id="@+id/regist_back"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_gravity="center_vertical"
@@ -26,7 +26,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginLeft="16dp"
-            android:text="登录"
+            android:text="注册"
             android:textColor="#ffffff"
             android:textSize="20sp" />
 
@@ -46,19 +46,12 @@
             android:layout_margin="8dp"
             android:orientation="horizontal">
 
-            <ImageView
-                android:layout_width="36dp"
-                android:layout_height="36dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="8dp"
-                android:src="@drawable/ic_login" />
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginLeft="8dp"
-                android:text="账户"
+                android:text="用户名"
                 android:textSize="24sp" />
 
             <RelativeLayout
@@ -66,14 +59,48 @@
                 android:layout_height="wrap_content">
 
                 <EditText
-                    android:id="@+id/et_login_username"
+                    android:id="@+id/et_regist_username"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentTop="true"
                     android:layout_marginStart="8dp"
-                    android:hint="请输入账户(手机号码)"
-                    android:inputType="numberSigned"
+                    android:hint="请输入注册用户名"
+                    android:textColor="@color/red500"
+                    android:textSize="24sp" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="8dp"
+                android:text="手机"
+                android:textSize="24sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/et_regist_phoneNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="8dp"
+                    android:hint="请输入手机号码"
+                    android:inputType="number"
                     android:textColor="@color/red500"
                     android:textSize="24sp" />
 
@@ -86,13 +113,6 @@
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="36dp"
-                android:layout_height="36dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="8dp"
-                android:src="@drawable/ic_pwd" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -107,7 +127,42 @@
                 android:layout_height="wrap_content">
 
                 <EditText
-                    android:id="@+id/et_login_pwd"
+                    android:id="@+id/et_regist_pwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="8dp"
+                    android:hint="请输入密码"
+                    android:inputType="textPassword"
+                    android:textColor="@color/red500"
+                    android:textSize="24sp" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="8dp"
+                android:text="确认密码"
+                android:textSize="24sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/et_regist_pwd2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
@@ -127,15 +182,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <Button
-                android:id="@+id/bt_login_Forget"
+            <CheckBox
+                android:id="@+id/regist_checkbox_agree"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center|left"
                 android:layout_margin="16dp"
-                android:background="@drawable/btn_selector2"
-                android:text="忘记密码"
-                android:textColor="@color/white"
+                android:text="同意协议"
+                android:textColor="@color/black"
                 android:theme="@style/RippleBlue" />
 
             <Button
@@ -150,7 +204,7 @@
                 android:theme="@style/RippleBlue" />
 
             <Button
-                android:id="@+id/bt_login_Login"
+                android:id="@+id/bt_regist_alreadyhave"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
@@ -158,7 +212,7 @@
                 android:layout_gravity="center|right"
                 android:layout_margin="16dp"
                 android:background="@drawable/btn_selector2"
-                android:text="登录"
+                android:text="已有账号"
                 android:textColor="@color/white"
                 android:theme="@style/RippleBlue" />
 
