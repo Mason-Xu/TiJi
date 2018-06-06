@@ -1,4 +1,4 @@
-package xyz.masonxu.tiji;
+package xyz.masonxu.tijioriginal;
 
 import android.app.Application;
 import android.content.Context;

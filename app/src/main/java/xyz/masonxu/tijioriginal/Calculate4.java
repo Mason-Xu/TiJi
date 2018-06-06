@@ -1,4 +1,4 @@
-package xyz.masonxu.tiji;
+package xyz.masonxu.tijioriginal;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;

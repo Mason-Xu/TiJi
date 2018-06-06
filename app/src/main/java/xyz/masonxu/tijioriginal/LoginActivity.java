@@ -1,4 +1,4 @@
-package xyz.masonxu.tiji;
+package xyz.masonxu.tijioriginal;
 
 import android.content.Intent;
 import android.graphics.Color;

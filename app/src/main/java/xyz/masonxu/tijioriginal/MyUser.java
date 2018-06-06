@@ -1,22 +1,20 @@
-package xyz.masonxu.tiji;
+package xyz.masonxu.tijioriginal;
 
-import org.litepal.crud.DataSupport;
+import cn.bmob.v3.BmobUser;
 
-public class Body extends DataSupport {
-    private int id;
+/**
+ * Created by Mason on 2017/12/26.
+ */
+
+public class MyUser extends BmobUser {
+    /**
+     * 服务器上传数据
+     */
+
     private Double BMI;
     private Double WHtR;
     private Double WHR;
     private Double Tizhi;
-
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public Double getBMI() {
         return BMI;

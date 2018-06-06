@@ -1,4 +1,4 @@
-package xyz.masonxu.tiji;
+package xyz.masonxu.tijioriginal;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;

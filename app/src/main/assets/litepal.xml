@@ -4,6 +4,6 @@
 
     <version value="1" ></version>
     <list>
-        <mapping class="xyz.masonxu.tiji.Body"></mapping>
+        <mapping class="xyz.masonxu.tijioriginal.Body"></mapping>
     </list>
 </litepal>

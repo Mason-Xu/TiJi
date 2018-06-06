@@ -1,4 +1,4 @@
-package xyz.masonxu.tiji;
+package xyz.masonxu.tijioriginal;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,9 +15,9 @@ import android.widget.RadioGroup;
 /**
  * Created by Carson_Ho on 16/7/22.
  */
-public class Fragment3 extends Fragment {
+public class Fragment4 extends Fragment {
 
-    private Double WHR;
+    private Double Tizhi;
     private RadioButton maleRadioButton;
     private RadioButton femaleRadioButton;
     private Integer sexTemp;
@@ -27,29 +27,30 @@ public class Fragment3 extends Fragment {
     public View onCreateView(LayoutInflater inflater,
                              @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-
-        View view = inflater.inflate(R.layout.fragment3,container,false);
-        final EditText et_whr_yaowei = (EditText)view.findViewById(R.id.et_whr_yaowei);
-        final EditText et_whr_tunwei = (EditText)view.findViewById(R.id.et_whr_tunwei);
-        RadioGroup sexRadioGroup = (RadioGroup)view.findViewById(R.id.rg_whr_sexRadio);
-        maleRadioButton = (RadioButton)view.findViewById(R.id.rb_whr_male);
-        femaleRadioButton = (RadioButton)view.findViewById(R.id.rb_whr_female);
+        View view = inflater.inflate(R.layout.fragment4, container, false);
+        final EditText et_tizhi_height = (EditText) view.findViewById(R.id.et_tizhi_height);
+        final EditText et_tizhi_weight = (EditText) view.findViewById(R.id.et_tizhi_weight);
+        final EditText et_tizhi_age= (EditText) view.findViewById(R.id.et_tizhi_age);
+        RadioGroup sexRadioGroup = (RadioGroup) view.findViewById(R.id.rg_tizhi_sexRadio);
+        maleRadioButton = (RadioButton) view.findViewById(R.id.rb_tizhi_male);
+        femaleRadioButton = (RadioButton) view.findViewById(R.id.rb_tizhi_female);
 
         sexRadioGroup.setOnCheckedChangeListener(new OnCheckedChangeListenerImpl());
 
-        Button bt_calculate_WHR = (Button)view.findViewById(R.id.bt_calculate_WHR);
-        bt_calculate_WHR.setOnClickListener(new View.OnClickListener() {
+        Button bt_calculate_Tizhi = (Button) view.findViewById(R.id.bt_calculate_Tizhi);
+        bt_calculate_Tizhi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                Double yaowei = Double.parseDouble(String.valueOf(et_whr_yaowei.getText()));
-                Double tunwei = Double.parseDouble(String.valueOf(et_whr_tunwei.getText()));
-                WHR = (yaowei/tunwei);
+                Double age = Double.parseDouble(String.valueOf(et_tizhi_age.getText()));
+                Double height = Double.parseDouble(String.valueOf(et_tizhi_height.getText()));
+                Double weight = Double.parseDouble(String.valueOf(et_tizhi_weight.getText()));
+                Tizhi = (1.2*weight/height/height*10000)+(0.23*age-5.4)-(10.8*sexTemp);
                 Intent intent = new Intent();
-                intent.setClass(getActivity(), Calculate3.class);
+                intent.setClass(getActivity(), Calculate4.class);
                 // 传递参数
-                intent.putExtra("WHR",WHR);
-                intent.putExtra("sex",sexTemp);
+                intent.putExtra("Tizhi",Tizhi);
+                intent.putExtra("sex", sexTemp);
                 startActivityForResult(intent, 0);
             }
         });
@@ -72,4 +73,5 @@ public class Fragment3 extends Fragment {
             }
         }
     }
+
 }
